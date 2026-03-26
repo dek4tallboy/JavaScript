@@ -1,1 +1,4 @@
 Essa é a atividade feita por mim André Luiz Lima Mendes, onde respondi as 21 questões e aqui estão presentes meus arquivos para análise do código.
+Não coloquei 1 página HTML para cada uma, porém fiz de uma forma mais fácil de entender.
+Utilizei alguns métodos mais avançados do que o até então apresentado, pois fiz a atividade já tendo algum conhecimento breve de pesquisas com IA a respeito do que via nas aulas e também pelo curso que estou fazendo por fora para complementar o conhecimento das aulas.
+Um do métodos utilizados foram as funções, queria fazer com while para ficar repetindo o menu e as questões, porém eu não sabia fazer e quando pesquisei achei ainda mais confuso, então para não ser cola, somente utilizei o que sabia e o que aprendi, nesse caso usei um arquivo Js externo para que você possa chamar as questões que seram mostradas no console e as questões que seram mostradas no HTML eu fiz dentro de um Js interno.
