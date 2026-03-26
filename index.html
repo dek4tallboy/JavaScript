@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <title>Lista de Exercícios</title>
+</head>
+<body>
+
+    <h1>Lista de Exercícios</h1>
+
+    <h2>Questão 5 - Verificação de Idade</h2>
+    <form onsubmit="verificarIdade(event)">
+        <input type="number" id="idade" placeholder="Idade" required>
+        <button type="submit">Verificar</button>
+    </form>
+    <p id="resultado5"></p>
+
+    <h2>Questão 6 - Par ou Ímpar</h2>
+    <form onsubmit="verificarNumero(event)">
+        <input type="number" id="numero" placeholder="Número" required>
+        <button type="submit">Verificar</button>
+    </form>
+    <p id="resultado6"></p>
+
+    <h2>Questão 7 - Situação do Aluno</h2>
+    <form onsubmit="verificarNota(event)">
+        <input type="number" id="nota" min="0" max="10" placeholder="Nota" required>
+        <button type="submit">Verificar</button>
+    </form>
+    <p id="resultado7"></p>
+
+    <h2>Questão 8 - Positivo, Negativo ou Zero</h2>
+    <form onsubmit="verificarSinal(event)">
+        <input type="number" id="numero8" placeholder="Número" required>
+        <button type="submit">Verificar</button>
+    </form>
+    <p id="resultado8"></p>
+
+    <h2>Questão 9 - Tabuada</h2>
+    <form onsubmit="gerarTabuada(event)">
+        <input type="number" id="numero9" placeholder="Número" required>
+        <button type="submit">Gerar Tabuada</button>
+    </form>
+    <p id="resultado9"></p>
+
+    <!-- q21() -->
+    <h2>Questão 21 - Fila de Atendimento</h2>
+    <input type="text" id="nomeFila" placeholder="Digite o nome">
+    <button onclick="q21()">Entrar na fila</button>
+    <button onclick="atender()">Atender</button>
+
+    <div id="fila"></div>
+    <div id="atendidos"></div>
+
+    <script>
+
+        //Questões 5-9(possuem prompt)
+        function verificarIdade(event) {
+            event.preventDefault();
+            let idade = Number(document.getElementById("idade").value);
+
+            let resultado = idade < 12 ? "Criança"
+                : idade <= 17 ? "Adolescente"
+                : "Adulto";
+
+            document.getElementById("resultado5").innerText = resultado;
+        }
+
+        function verificarNumero(event) {
+            event.preventDefault();
+            let numero = Number(document.getElementById("numero").value);
+
+            let resultado = numero % 2 === 0
+                ? `O número ${numero} é par!`
+                : `O número ${numero} é ímpar!`;
+
+            document.getElementById("resultado6").innerText = resultado;
+        }
+
+        function verificarNota(event) {
+            event.preventDefault();
+            let nota = Number(document.getElementById("nota").value);
+
+            let resultado = nota >= 7 ? "Aprovado"
+                : nota >= 5 ? "Recuperação"
+                : "Reprovado";
+
+            document.getElementById("resultado7").innerText = resultado;
+        }
+
+        function verificarSinal(event) {
+            event.preventDefault();
+            let numero = Number(document.getElementById("numero8").value);
+
+            let resultado = numero > 0
+                ? "Positivo"
+                : numero < 0
+                ? "Negativo"
+                : "Zero";
+
+            document.getElementById("resultado8").innerText = resultado;
+        }
+
+        function gerarTabuada(event) {
+            event.preventDefault();
+            let num = Number(document.getElementById("numero9").value);
+
+            let resultado = "";
+
+            for (let i = 1; i <= 10; i++) {
+                resultado += `${num} x ${i} = ${num * i}\n`;
+            }
+
+            document.getElementById("resultado9").innerText = resultado;
+        }
+    
+    </script>
+
+    <script src="script.js"></script>
+
+</body>
+</html>
